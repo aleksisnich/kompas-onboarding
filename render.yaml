@@ -1,0 +1,14 @@
+# Ready-to-deploy Render Blueprint. No secrets or Python packages required.
+services:
+  - type: web
+    name: kompas-onboarding-demo
+    runtime: python
+    plan: free
+    buildCommand: python -m compileall -q .
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: DEMO_PUBLIC
+        value: "1"
+      - key: ENABLE_LLM
+        value: "0"

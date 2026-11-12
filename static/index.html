@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#172a3d" />
+  <meta name="description" content="Компас — демонстрационный помощник адаптации сотрудников." />
+  <title>Компас — помощник на новом месте</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo"><div class="logo-mark">⌖</div><div><strong>Компас</strong><small>адаптация без стресса</small></div></div>
+      <div class="sidebar-caption">ЛИЧНОЕ ПРОСТРАНСТВО</div>
+      <nav id="main-nav" aria-label="Основная навигация">
+        <button class="nav-link active" data-page="home"><span>⌂</span> Главная</button>
+        <button class="nav-link" data-page="knowledge"><span>▤</span> База знаний</button>
+        <button class="nav-link" data-page="chat"><span>✦</span> Спросить ИИ</button>
+        <button class="nav-link" data-page="feedback"><span>♡</span> Нужна помощь</button>
+      </nav>
+      <div class="sidebar-caption manage-caption">ДЛЯ КОМАНДЫ</div>
+      <nav aria-label="HR">
+        <button class="nav-link" data-page="hr"><span>▦</span> Панель HR <span class="tiny-dot"></span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="confidentiality"><span>◈</span><p><b>Можно задавать вопросы</b><small>Необязательно знать всё с первого дня.</small></p></div>
+        <div class="demo-flag">● ДЕМО-ПРОЕКТ · данные вымышленные</div>
+      </div>
+    </aside>
+    <div class="body-area">
+      <header class="topbar">
+        <button id="mobile-toggle" class="icon-btn mobile-toggle" title="Меню">☰</button>
+        <div class="breadcrumbs"><span>Рабочее пространство</span><span class="crumb-divider">/</span><b id="page-crumb">Главная</b></div>
+        <div class="top-actions"><span class="mode-pill" id="mode-pill">● Демо</span><label class="user-picker"><span>Сотрудник</span><select id="employee-picker" aria-label="Демо-сотрудник"></select></label><div class="avatar" id="avatar">АП</div></div>
+      </header>
+      <main id="app" tabindex="-1"><div class="loading">Загружаем приложение…</div></main>
+      <footer class="footer">Компас · учебный прототип · не является системой ТГТ · <button id="reset-btn">Сбросить демо-данные</button></footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
